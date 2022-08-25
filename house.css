@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.55)),url(=bg.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.navbar{
+    display: flex;
+    width: 85%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    margin: auto;
+}
+.logo{
+    cursor: pointer;
+}
+.logo img{
+    width: 120px;   
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0px 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: aqua;
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    transition: 0.8s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.contant{
+    width: 100%;
+    position: relative;
+    top: 90px;
+    text-align: center;
+    color: white;
+}
+.contant h1{
+    font-size: 50px;
+    margin: 5px auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contant p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15px auto;
+    line-height: 15px;
+    font-weight: 100;
+    font-size: 15px;
+}
+button{
+    padding: 10px 20px;
+    margin: 5px 20px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    z-index: 0;
+}
+button::after{
+    content: '';
+    background-color: aqua;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+    transform: scaleX(0);
+    transform-origin: left;              
+    z-index: -1;
+}
+button:hover::after{
+    transform: scaleX(1);
+}
+button:focus::before{
+    transform: scaleX(1);
+}
+button:hover,button:focus{
+    color: rgb(129, 120, 120);
+}
